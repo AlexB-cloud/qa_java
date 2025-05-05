@@ -6,7 +6,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 
-public class FelineNonParameterizedTests {
+public class FelineNonParameterizedTest {
     @Test
     public void testEatMeat() throws Exception {
         Feline feline = new Feline();

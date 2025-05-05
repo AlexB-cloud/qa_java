@@ -6,11 +6,11 @@ import org.junit.runners.Parameterized;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class FelineParameterizedTests {
+public class FelineParameterizedTest {
     private final int inputCount;
     private final int expectedCount;
     private final Feline feline;
-    public FelineParameterizedTests(int inputCount, int expectedCount) {
+    public FelineParameterizedTest(int inputCount, int expectedCount) {
         this.inputCount = inputCount;
         this.expectedCount = expectedCount;
         this.feline = new Feline();
