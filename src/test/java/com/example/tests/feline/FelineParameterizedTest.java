@@ -1,4 +1,4 @@
-package com.example.tests;
+package com.example.tests.feline;
 import com.example.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +16,8 @@ public class FelineParameterizedTest {
         this.feline = new Feline();
     }
 @Parameterized.Parameters
-public static Object[][] kittensDataProvider() {
-    return new Object[][] {
+public static Object[][] getKittensData() {
+    return new Object[][] { // {inputCount, expectedCount}
             {0, 0},
             {1, 1},
             {5, 5},

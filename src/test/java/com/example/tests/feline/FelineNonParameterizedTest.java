@@ -1,4 +1,4 @@
-package com.example.tests;
+package com.example.tests.feline;
 import com.example.*;
 import org.junit.Test;
 import java.util.Arrays;
