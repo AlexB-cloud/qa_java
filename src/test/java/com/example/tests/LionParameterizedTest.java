@@ -1,7 +1,7 @@
 package com.example.tests;
 
 import com.example.Lion;
-import com.example.Predator;
+import com.example.Feline;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ public class LionParameterizedTest {
         this.expectedKittensCount=expectedKittensCount;
     }
     @Mock
-    Predator predator;
+    Feline feline;
 
     @Parameterized.Parameters()
     public static Object[][] getData() { // {"sexString",expectedHasMane ,expectedKittensCount}
@@ -37,15 +37,15 @@ public class LionParameterizedTest {
     }
     @Test
     public void testGetKittens() throws Exception {
-        Lion lion = new Lion("Самец", predator);
-        Mockito.when(predator.getKittens()).thenReturn(expectedKittensCount);
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getKittens()).thenReturn(expectedKittensCount);
 
         assertEquals(expectedKittensCount, lion.getKittens());
-        Mockito.verify(predator, Mockito.times(1)).getKittens();
+        Mockito.verify(feline, Mockito.times(1)).getKittens();
     }
     @Test
     public void testDoesHaveMane() throws Exception {
-        Lion lion = new Lion(sex, predator);
+        Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
 }
